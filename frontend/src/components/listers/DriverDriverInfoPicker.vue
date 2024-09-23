@@ -30,10 +30,10 @@
                                 IsActive :  {{item.isActive }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                VehicleInfoIds :  {{item.vehicleInfoIds }}
+                                UserInfoId :  {{item.userInfoId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                UserInfoId :  {{item.userInfoId }}
+                                VehicleInfoId :  {{item.vehicleInfoId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

@@ -71,8 +71,8 @@
                     { text: "contact", value: "contact" },
                     { text: "permission", value: "permission" },
                     { text: "isActive", value: "isActive" },
-                    { text: "vehicleInfoIds", value: "vehicleInfoIds" },
                     { text: "userInfoId", value: "userInfoId" },
+                    { text: "vehicleInfoId", value: "vehicleInfoId" },
                 ],
             driverInfo : [],
             newValue: {},
@@ -95,8 +95,8 @@
                 'contact': '',
                 'permission': '',
                 'isActive': false,
-                'vehicleInfoIds': [],
                 'userInfoId': {},
+                'vehicleInfoId': {},
             }
         },
         methods: {

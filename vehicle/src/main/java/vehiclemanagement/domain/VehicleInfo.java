@@ -53,6 +53,15 @@ public class VehicleInfo {
         return vehicleInfoRepository;
     }
 
+    public void createVehicleInfo(
+        CreateVehicleInfoCommand createVehicleInfoCommand
+    ) {
+        //implement business logic here:
+
+        VehicleInfoCreated vehicleInfoCreated = new VehicleInfoCreated(this);
+        vehicleInfoCreated.publishAfterCommit();
+    }
+
     //<<< Clean Arch / Port Method
     public void updateVehicleInfo(
         UpdateVehicleInfoCommand updateVehicleInfoCommand
@@ -62,7 +71,15 @@ public class VehicleInfo {
         VehicleInfoUpdated vehicleInfoUpdated = new VehicleInfoUpdated(this);
         vehicleInfoUpdated.publishAfterCommit();
     }
-    //>>> Clean Arch / Port Method
 
+    //>>> Clean Arch / Port Method
+    public void deleteVehicleInfo(
+        DeleteVehicleInfoCommand deleteVehicleInfoCommand
+    ) {
+        //implement business logic here:
+
+        VehicleInfoDeleted vehicleInfoDeleted = new VehicleInfoDeleted(this);
+        vehicleInfoDeleted.publishAfterCommit();
+    }
 }
 //>>> DDD / Aggregate Root

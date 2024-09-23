@@ -38,7 +38,7 @@ mvn spring-boot:run
 ```
 - driver
 ```
- http :8088/driverInfos companyName="companyName" affiliation="affiliation" contact="contact" permission="permission" isActive="isActive" vehicleInfoIds="vehicleInfoIds" userInfoId="userInfoId" 
+ http :8088/driverInfos companyName="companyName" affiliation="affiliation" contact="contact" permission="permission" isActive="isActive" userInfoId="userInfoId" vehicleInfoId="vehicleInfoId" 
 ```
 - vehicle
 ```

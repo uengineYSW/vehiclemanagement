@@ -21,9 +21,8 @@
             <String label="연락처" v-model="value.contact" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="권한" v-model="value.permission" :editMode="editMode" :inputUI="'TEXT'"/>
             <Boolean label="사용여부" v-model="value.isActive" :editMode="editMode" :inputUI="'SELECT'"/>
-            <List&lt;VehicleInfoId&gt; offline label="VehicleInfoIds" v-model="value.vehicleInfoIds" :editMode="editMode" @change="change"/>
-            <VehicleInfoIdManager offline label="VehicleInfoIds" v-model="value.vehicleInfoIds" :editMode="editMode" @change="change"/>
             <UserInfoId offline label="UserInfoId" v-model="value.userInfoId" :editMode="editMode" @change="change"/>
+            <VehicleInfoId offline label="VehicleInfoId" v-model="value.vehicleInfoId" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -42,14 +41,14 @@
                     text
                     @click="save"
                 >
-                    운전자 정보 생성
+                    운전자 정보 삭제
                 </v-btn>
                 <v-btn
                     color="primary"
                     text
                     @click="save"
                 >
-                    운전자 정보 삭제
+                    운전자 정보 생성
                 </v-btn>
                 <v-btn
                     color="primary"

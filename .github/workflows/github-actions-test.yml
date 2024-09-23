@@ -1,0 +1,34 @@
+name: test
+run-name: testing 
+on: [push]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Prepare Test Environment
+      run: |
+        cd driver
+        mkdir -p ignore_test_file
+        mv src/test/java/vehicle-management/*.java ignore_test_file/ || true
+        mv ignore_test_file/CreateDriverInfoTest.java src/test/java/vehicle-management/ || true
+    - name: Compile and Run Specific Test
+      run: |
+        cd driver
+        mvn test-compile
+        mvn test -Dtest=vehicle-management.CreateDriverInfoTest -Dsurefire.useFile=false
+    - name: Restore Test Files
+      if: always()
+      run: |
+        cd driver
+        if [ -d "ignore_test_file" ] && [ "$(ls -A ignore_test_file)" ]; then
+          mv ignore_test_file/*.java src/test/java/vehicle-management/
+        fi
+        rm -rf ignore_test_file
+    - name: Print Test Results
+      if: always()
+      run: |
+        cd driver
+        cat target/surefire-reports/*.txt || true

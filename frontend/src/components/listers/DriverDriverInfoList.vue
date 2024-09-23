@@ -55,8 +55,8 @@
                             [ Contact :  {{data.contact }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Permission :  {{data.permission }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ IsActive :  {{data.isActive }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ VehicleInfoIds :  {{data.vehicleInfoIds }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserInfoId :  {{data.userInfoId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ VehicleInfoId :  {{data.vehicleInfoId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -129,8 +129,8 @@
                 'contact': '',
                 'permission': '',
                 'isActive': false,
-                'vehicleInfoIds': [],
                 'userInfoId': {},
+                'vehicleInfoId': {},
             }
         },
         methods: {

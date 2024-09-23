@@ -45,7 +45,7 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','affiliation','contact','permission','isActive','vehicleInfoIds','userInfoId',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','affiliation','contact','permission','isActive','userInfoId','vehicleInfoId',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
             <wj-flex-grid-column binding="affiliation" header="소속" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="contact" header="연락처" width="2*" :isReadOnly="true" align="center" />
@@ -54,6 +54,11 @@
             <wj-flex-grid-column binding="userInfoId" header="UserInfoId" width="2*" :isReadOnly="true" align="center">
                 <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
                     <UserInfoId v-model="cell.item.userInfoId" :editMode="editMode"></UserInfoId>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
+            <wj-flex-grid-column binding="vehicleInfoId" header="VehicleInfoId" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <VehicleInfoId v-model="cell.item.vehicleInfoId" :editMode="editMode"></VehicleInfoId>
                 </wj-flex-grid-cell-template>
             </wj-flex-grid-column>
             <wj-flex-grid-column binding="vehicleInfoId" header="차량 정보" width="2*" :isReadOnly="true" align="center">
@@ -69,7 +74,6 @@
                 </wj-flex-grid-cell-template>
             </wj-flex-grid-column>
         </wj-flex-grid>
-        <VehicleInfoIdDetailGrid label="VehicleInfoIds" offline v-if="selectedRow" v-model="selectedRow.vehicleInfoIds"/>
         <v-col>
             <v-dialog
                 v-model="openDialog"

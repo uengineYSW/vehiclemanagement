@@ -20,8 +20,8 @@
             <div>
                 <Boolean label="IsActive" v-model="item.isActive" :editMode="editMode" @change="change" />
             </div>
-            <VehicleInfoIdManager offline label="VehicleInfoIds" v-model="item.vehicleInfoIds" :editMode="false" @change="change" />
             <UserInfoId offline label="UserInfoId" v-model="item.userInfoId" :editMode="false" :key="false" @change="change" />
+            <VehicleInfoId offline label="VehicleInfoId" v-model="item.vehicleInfoId" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

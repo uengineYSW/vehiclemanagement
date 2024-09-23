@@ -58,8 +58,21 @@ public class DriverInfo {
     public void updateDriverInfo(
         UpdateDriverInfoCommand updateDriverInfoCommand
     ) {
-        //implement business logic here:
-
+        if (updateDriverInfoCommand.getCompanyName() != null) {
+            this.companyName = updateDriverInfoCommand.getCompanyName();
+        }
+        if (updateDriverInfoCommand.getAffiliation() != null) {
+            this.affiliation = updateDriverInfoCommand.getAffiliation();
+        }
+        if (updateDriverInfoCommand.getContact() != null) {
+            this.contact = updateDriverInfoCommand.getContact();
+        }
+        if (updateDriverInfoCommand.getPermission() != null) {
+            this.permission = updateDriverInfoCommand.getPermission();
+        }
+        if (updateDriverInfoCommand.getIsActive() != null) {
+            this.isActive = updateDriverInfoCommand.getIsActive();
+        }
         DriverInfoUpdated driverInfoUpdated = new DriverInfoUpdated(this);
         driverInfoUpdated.publishAfterCommit();
     }

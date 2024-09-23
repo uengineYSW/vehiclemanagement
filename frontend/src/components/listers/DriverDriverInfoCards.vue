@@ -120,8 +120,8 @@
                 'contact': '',
                 'permission': '',
                 'isActive': false,
-                'vehicleInfoIds': [],
                 'userInfoId': {},
+                'vehicleInfoId': {},
             }
         },
         methods:{

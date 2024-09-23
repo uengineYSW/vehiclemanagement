@@ -44,6 +44,13 @@ public class UserInfo {
         return userInfoRepository;
     }
 
+    public void createUserInfo(CreateUserInfoCommand createUserInfoCommand) {
+        //implement business logic here:
+
+        UserInfoCreated userInfoCreated = new UserInfoCreated(this);
+        userInfoCreated.publishAfterCommit();
+    }
+
     //<<< Clean Arch / Port Method
     public void updateUserInfo(UpdateUserInfoCommand updateUserInfoCommand) {
         //implement business logic here:
@@ -51,7 +58,13 @@ public class UserInfo {
         UserInfoUpdated userInfoUpdated = new UserInfoUpdated(this);
         userInfoUpdated.publishAfterCommit();
     }
-    //>>> Clean Arch / Port Method
 
+    //>>> Clean Arch / Port Method
+    public void deleteUserInfo(DeleteUserInfoCommand deleteUserInfoCommand) {
+        //implement business logic here:
+
+        UserInfoDeleted userInfoDeleted = new UserInfoDeleted(this);
+        userInfoDeleted.publishAfterCommit();
+    }
 }
 //>>> DDD / Aggregate Root
