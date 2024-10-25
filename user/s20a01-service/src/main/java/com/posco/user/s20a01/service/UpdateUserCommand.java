@@ -10,9 +10,9 @@ public class UpdateUserCommand {
     private Long userId;
     private String username;
     private Password password;
-    private Email email;
+    private String email;
     private String role;
-    private roleType roleType;
+    private String roleType;
     private Boolean isActive;
     private Date createdAt;
 }
