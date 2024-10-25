@@ -38,7 +38,6 @@ public class Driver {
     private Date createdAt;
 
     public void updateDriver(
-        Long driverId,
         Long userId,
         String name,
         String company,
