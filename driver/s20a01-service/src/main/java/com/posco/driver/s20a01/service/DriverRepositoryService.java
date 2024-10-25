@@ -25,14 +25,20 @@ public class DriverRepositoryService {
     }
 
     @RequestMapping(value = "/{id}/updateDriver", method = RequestMethod.POST)
-    public Driver updateDriver(UpdateDriverCommand updateDriverCommand) {
+    public Driver updateDriver(
+        @PathVariable("id") Long driverId,
+        @RequestBody UpdateDriverCommand updateDriverCommand
+    ) {
+
+        System.out.println("Received driverId: " + driverId);
+        System.out.println("Received updateDriverCommand: " + updateDriverCommand);
+        
         Driver driver = driverRepository
-            .findById(updateDriverCommand.getDriverId())
+            .findById(driverId)
             .orElseThrow(() -> new EntityNotFoundException("Driver not found"));
 
         // Map command fields to method parameters
         driver.updateDriver(
-            updateDriverCommand.getDriverId(),
             updateDriverCommand.getUserId(),
             updateDriverCommand.getName(),
             updateDriverCommand.getCompany(),
