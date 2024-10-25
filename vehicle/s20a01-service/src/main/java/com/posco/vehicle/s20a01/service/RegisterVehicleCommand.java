@@ -9,5 +9,4 @@ public class RegisterVehicleCommand {
 
     private String vehicleType;
     private String vehicleName;
-    private DriverId userId;
 }
