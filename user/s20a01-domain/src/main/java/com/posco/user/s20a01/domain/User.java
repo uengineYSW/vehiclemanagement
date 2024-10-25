@@ -33,9 +33,9 @@ public class User {
         Long userId,
         String username,
         Password password,
-        Email email,
+        String email,
         String role,
-        roleType roleType,
+        String roleType,
         Boolean isActive,
         Date createdAt
     ) {
