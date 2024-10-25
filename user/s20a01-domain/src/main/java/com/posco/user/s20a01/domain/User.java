@@ -32,7 +32,7 @@ public class User {
     public void updateUser(
         Long userId,
         String username,
-        Password password,
+        String password,
         String email,
         String role,
         String roleType,
