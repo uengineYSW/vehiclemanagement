@@ -9,7 +9,7 @@ public class UpdateUserCommand {
 
     private Long userId;
     private String username;
-    private Password password;
+    private String password;
     private String email;
     private String role;
     private String roleType;
