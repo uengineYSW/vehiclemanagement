@@ -8,7 +8,7 @@ import lombok.Data;
 public class CreateUserCommand {
 
     private String username;
-    private Password password;
+    private String password;
     private String email;
     private String role;
 }
