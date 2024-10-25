@@ -9,6 +9,6 @@ public class CreateUserCommand {
 
     private String username;
     private Password password;
-    private Email email;
+    private String email;
     private String role;
 }
